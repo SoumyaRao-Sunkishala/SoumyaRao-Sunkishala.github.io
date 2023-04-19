@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap');
 
 :root {
-    --yellow: #f9ca24;
+    color: green;
 }
 
 * {
@@ -17,7 +17,7 @@
 }
 
 *::selection {
-    background: var(--yellow);
+    background: green;
     color: #333;
 }
 
@@ -35,7 +35,7 @@ html::-webkit-scrollbar-track {
 }
 
 html::-webkit-scrollbar-thumb {
-    background: var(--yellow);
+    background: green
 }
 
 body {
@@ -65,7 +65,7 @@ section {
 }
 
 .btn:hover {
-    background: var(--yellow);
+    background: green
 }
 
 .heading {
@@ -77,7 +77,16 @@ section {
     color: #fff;
 }
 
-.heading2{
+.heading-title{
+    text-align: center;
+    margin: 0 6rem;
+    font-size: 3rem;
+    padding: 1rem;
+    border-bottom: .1rem solid #fff4;
+    color: #fff;
+}
+
+.heading2 {
     text-align: left;
     font-size: 3rem;
     border-bottom: .1rem solid #fff4;
@@ -85,7 +94,7 @@ section {
 }
 
 .heading span {
-    color: var(--yellow);
+    color: green;
 }
 
 header {
@@ -109,7 +118,7 @@ header .user img {
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 1rem;
-    border: .7rem solid var(--yellow);
+    border: .7rem solid green;
 }
 
 header .user .name {
@@ -143,7 +152,7 @@ header .navbar ul li a {
 }
 
 header .navbar ul li a:hover {
-    background: var(--yellow);
+    background: green
 }
 
 #menu {
@@ -177,13 +186,17 @@ header .navbar ul li a:hover {
 }
 
 .home h1 span {
-    color: var(--yellow);
+    color: green
 }
 
 .home p {
     font-size: 2rem;
     color: #eee;
     padding: 1rem 0;
+}
+
+.about {
+    height: auto;
 }
 
 .about .row {
@@ -202,7 +215,7 @@ header .navbar ul li a:hover {
 
 .about .row .info h3 {
     font-size: 2rem;
-    color: var(--yellow);
+    color: green;
     padding: 1rem 0;
     font-weight: normal;
 }
@@ -229,7 +242,7 @@ header .navbar ul li a:hover {
 
 .about .row .counter .box span {
     font-size: 4rem;
-    color: var(--yellow);
+    color: green;
 }
 
 .about .row .counter .box h3 {
@@ -238,13 +251,12 @@ header .navbar ul li a:hover {
 }
 
 .education .box-container {
-    display: grid;
+    display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
     padding: 1rem 0;
     padding-left: 3rem;
-    grid-template-columns: auto auto auto auto;
-
 }
 
 .education .box-container .box {
@@ -255,22 +267,6 @@ header .navbar ul li a:hover {
     border-left: .2rem solid #fff;
     position: relative;
 }
-
-
-.education .box-container .box i {
-    position: absolute;
-    top: -1.5rem;
-    left: -2.5rem;
-    height: 5rem;
-    width: 5rem;
-    border-radius: 50%;
-    line-height: 5rem;
-    text-align: center;
-    font-size: 2rem;
-    color: #fff;
-    background: var(--yellow);
-}
-
 
 .education .box-container .box span {
     font-size: 1.3rem;
@@ -290,6 +286,73 @@ header .navbar ul li a:hover {
     font-size: 1.4rem;
     color: #eee;
     padding: 1rem 0;
+}
+
+.education .box-container .box i {
+    position: absolute;
+    top: -1.5rem;
+    left: -2.5rem;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    line-height: 5rem;
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+    background-color: green;
+}
+
+.skill .box-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+    padding-left: 3rem;
+}
+
+.skill .box-container .box {
+    width: 23rem;
+    height: 23rem;
+    margin: 2rem;
+    padding: 1rem;
+    border-radius: 10%;
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 2px 8px 0px;
+    text-align: center;
+}
+
+.skill .box-container .box span {
+    font-size: 1.3rem;
+    background: #222;
+    color: #fff;
+    border-radius: 5rem;
+    padding: .5rem 2.5rem;
+}
+
+.skill .box-container .box h3 {
+    font-size: 2rem;
+    color: #fff;
+    padding-top: 1.5rem;
+}
+
+.skill .box-container .box p {
+    font-size: 1.4rem;
+    color: #eee;
+    padding: 1rem 0;
+}
+
+.skill .box-container .box i {
+    /* position: absolute; */
+    text-align: center;
+    padding-top: 4.5rem;
+    height: 15rem;
+    width: 100%;
+    border-radius: 10%;
+    line-height: 5rem;
+    text-align: center;
+    font-size: 7rem;
+    color: #fff;
+    background-color: green;
 }
 
 .portfolio {
@@ -332,7 +395,7 @@ header .navbar ul li a:hover {
 .portfolio .box-container .inbox .box img {
     height: 100%;
     width: 100%;
-    /* margin-bottom: -20px; */
+    margin-bottom: -20px;
     /* object-fit: cover; */
 }
 
@@ -349,30 +412,67 @@ header .navbar ul li a:hover {
 
 .portfolio .box-container .inbox .box .fullcap .abc {
     display: inline-block;
-    background-color: var(--yellow);
-    border: 2px  var(--yellow);
+    background-color: green;
+    border: 2px  green;
     color: white;
     text-align: center;
     font-size: 16px;
-    padding: 10px 10px;
+    padding: 10px 20px;
     cursor: pointer;
     text-decoration: none;
 }
 
 .portfolio .box-container .inbox .box .fullcap .abc:hover {
     background-color: white;
-    color: var(--yellow);
-    border: 2px var(--yellow);
+    color: green;
+    border: 2px green;
+}
+
+
+.techh div {
+    text-align: center;
+}
+
+.portfolio .techh i {
+    font-size: 40px;
+    margin-bottom: 10px;
+
+}
+
+
+.portfolio .product-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+}
+
+.portfolio .product-container .box{
+    
+    margin: auto;
+    margin-top: 10px;
+}
+
+.portfolio .product-container .box{
+    width: 83%;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.portfolio .product-container .box>div{
+    border: 2px solid white;
+}
+
+.portfolio .product-container .box img{
+    width: 100%;
 }
 
 .fa-brands {
     font-size: 50px;
 }
 
-
-
 .techh {
-    
     display: grid;
     grid-template-columns: auto auto auto auto;
     margin-bottom: 20px;
@@ -384,40 +484,14 @@ header .navbar ul li a:hover {
     width: 50px;
     font-size: 15px;
     text-align: center;
-    color: var(--yellow);
+    color: green;
     margin-bottom: 20px;
 }
 
-.heading-title{
+.portfolio .box-container .box h1 {
+    margin-top: 30px;
     text-align: center;
-    margin: 0 6rem;
-    font-size: 3rem;
-    padding: 1rem;
-    border-bottom: .1rem solid #fff4;
-    color: #fff;
 }
-
-
-
-.education .box-container .box .fullcap .abc {
-    display: inline-block;
-    background-color: var(--yellow);
-    border: 2px  var(--yellow);
-    color: white;
-    text-align: center;
-    font-size: 16px;
-    padding: 10px 20px;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.education .box-container .box .fullcap .abc:hov {
-    background-color: white;
-    color: var(--yellow);
-    border: 2px var(--yellow);
-}
-
-
 
 .contact .row {
     display: flex;
@@ -476,7 +550,7 @@ header .navbar ul li a:hover {
 
 .contact .row .content .info h3 i {
     padding-right: 1rem;
-    color: var(--yellow);
+    color: green
 }
 
 .top {
@@ -489,185 +563,13 @@ header .navbar ul li a:hover {
 
 .logoAdd {
     font-size: 50px;
-    color: var(--yellow);
+    color: green
 }
 
 
 
 
 @media (max-width:1200px) {
-
-    html {
-        font-size: 55%;
-    }
-
-    .home {
-        padding: 1rem 4rem;
-    }
-
-}
-
-@media (max-width:991px) {
-
-    header {
-        left: -120%;
-    }
-
-    #menu {
-        display: block;
-    }
-
-    header.toggle {
-        left: 0%;
-    }
-
-    body {
-        padding: 0;
-    }
-
-}
-
-@media (max-width:768px) {
-
-    html {
-        font-size: 50%;
-    }
-
-}
-
-@media (max-width:400px) {
-
-    header {
-        width: 100vw;
-    }
-
-    .heading {
-        margin: 0 3rem;
-    }
-
-    .about .row .counter .box {
-        width: 100%;
-    }
-
-    .education .box-container .box {
-        width: 100%;
-    }
-
-    .portfolio .box-container .box {
-        width: 100%;
-    }
-
-    .contact .row form {
-        margin: 3rem 0;
-    }
-
-}
-
-
-
-/* Educaton Details */
-
-@media (max-width: 768px) {
-
-    .about .row {
-      flex-direction: column;
-    }
-  
-    .about .education {
-      margin-top: 2rem;
-    }
-  
-    .about .box-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .about .box {
-      width: 100%;
-      max-width: 400px;
-    }
-  
-    .about .box:not(:last-child) {
-      margin-bottom: 2rem;
-    }
-  
-  }
-
-  
-  /* For devices with a maximum width of 600px */
-@media (max-width: 600px) {
-    #calendar {
-        /* adjust font size for smaller screens */
-        font-size: 16px;
-    }
-    .calendar {
-        /* adjust width to fit smaller screens */
-        width: 80%;
-        /* center the calendar on smaller screens */
-        margin: 0 auto;
-    }
-}
-
-/* Github calendar */
-/* For small screens (up to 480px) */
-@media (max-width: 480px) {
-    #calendar {
-        /* adjust font size for smaller screens */
-        font-size: 14px;
-    }
-    .calendar {
-        /* adjust width to fit smaller screens */
-        width: 90%;
-        /* center the calendar on smaller screens */
-        margin: 0 auto;
-    }
-}
-
-/* For medium screens (481px to 768px) */
-@media (min-width: 481px) and (max-width: 768px) {
-    #calendar {
-        /* adjust font size for medium screens */
-        font-size: 16px;
-    }
-    .calendar {
-        /* adjust width for medium screens */
-        width: 80%;
-        /* center the calendar on medium screens */
-        margin: 0 auto;
-    }
-}
-
-/* For large screens (769px and up) */
-@media (min-width: 769px) {
-    #calendar {
-        /* adjust font size for larger screens */
-        font-size: 18px;
-    }
-    .calendar {
-        /* adjust width for larger screens */
-        width: 90%;
-    }
-}
-
-.calendar {
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  @media screen and (max-width: 768px) {
-    .calendar {
-      max-width: 400px;
-    }
-  }
-  
-
-
-
-
-
-  @media (max-width:1200px) {
     .calender {
         width: 80%;
     }
